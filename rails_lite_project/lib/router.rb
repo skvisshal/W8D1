@@ -2,6 +2,8 @@ class Route
   attr_reader :pattern, :http_method, :controller_class, :action_name
 
   def initialize(pattern, http_method, controller_class, action_name)
+    @pattern = pattern
+    @http_method = http_method
   end
 
   # checks if pattern matches path and method matches request method
